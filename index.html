@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>لمبة LED ذكية</title>
+
+<style>
+
+body{
+font-family:Arial;
+background: rgb(73, 70, 70);
+text-align:center;
+}
+
+.container{
+background:white;
+width:90%;
+max-width:500px;
+margin:auto;
+margin-top:40px;
+padding:20px;
+border-radius:10px;
+}
+
+img{
+width:100%;
+margin-top:10px;
+}
+
+input{
+width:90%;
+padding:10px;
+margin:10px;
+}
+
+button{
+background:green;
+color:white;
+border:none;
+padding:12px 25px;
+font-size:18px;
+border-radius:6px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav><img src="WhatsApp Image 2026-03-05 at 12.52.09 AM.jpeg" alt="" style="width: 200px; height: 120px; border: none; border-radius: 20px; position: relative; left: 640px;"></nav>
+
+
+<div class="container">
+
+<h2>لمبة LED بحساس حركة 💡</h2>
+
+<img src="WhatsApp Image 2026-02-27 at 1.05.00 AM copy.jpeg">
+<h2>اشكال جمالية</h2>
+
+<br>
+<hr>
+
+<img src="WhatsApp Image 2026-02-27 at 1.23.33 AM.jpeg">
+<h2>توفر طاقة</h2>
+
+<br>
+<hr>
+
+<img src="WhatsApp Image 2026-02-27 at 1.23.34 AM.jpeg">
+<h2>سهلة التركيب</h2>
+
+<br>
+
+
+<h2>للتواصل عبر واتساب</h2>
+<a href="https://wa.me/201094492277?text=مرحبا%20اريد%20طلب%20لمبة%20LED%20المتحركة%20الرجاء%20التواصل%20معي" target="_blank">
+<button>اطلب الآن</button>
+</a>
+
+<br>
+<br>
+<br>
+
+<input id="name" placeholder="الاسم بالكامل">
+<input id="phone" placeholder="رقم الهاتف">
+<input id="address" placeholder="العنوان بالكامل">
+<br><br>
+<button onclick="saveOrder()">تأكيد الطلب</button>
+
+</div>
+
+<script>
+
+function saveOrder(){
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let address=document.getElementById("address").value;
+
+let orders=JSON.parse(localStorage.getItem("orders"))||[];
+
+orders.push({
+name:name,
+phone:phone,
+address:address
+});
+
+localStorage.setItem("orders",JSON.stringify(orders));
+
+let message=
+"طلب جديد 🔥%0A"+
+"الاسم: "+name+"%0A"+
+"الهاتف: "+phone+"%0A"+
+"العنوان: "+address;
+
+let number="201094492277"; // حط رقمك هنا
+
+window.open("https://wa.me/"+number+"?text="+message);
+
+window.location.href="thanks.html";
+
+}
+
+</script>
+
+</body>
+</html>
+
