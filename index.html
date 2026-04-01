@@ -1,132 +1,87 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>لمبة LED ذكية</title>
-
-<style>
-
-body{
-font-family:Arial;
-background: rgb(73, 70, 70);
-text-align:center;
-}
-
-.container{
-background:white;
-width:90%;
-max-width:500px;
-margin:auto;
-margin-top:40px;
-padding:20px;
-border-radius:10px;
-}
-
-img{
-width:100%;
-margin-top:10px;
-}
-
-input{
-width:90%;
-padding:10px;
-margin:10px;
-}
-
-button{
-background:green;
-color:white;
-border:none;
-padding:12px 25px;
-font-size:18px;
-border-radius:6px;
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVEL</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+   
+<header class="container">
+    <nav>
+        <div class="logo">
+            <h2>NOVEL<span></span></h2>
+        </div>
 
-<nav><img src="WhatsApp Image 2026-03-05 at 12.52.09 AM.jpeg" alt="" style="width: 200px; height: 120px; border: none; border-radius: 20px;"></nav>
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="thebest.html">the best</a></li>
+        </ul>
 
+   
+        <div class="icons">
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-shopping-cart"></i>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        
+        <i class="fa-solid fa-bars" id="bars"></i>
+    </nav>
 
-<div class="container">
+</header>
+ <section class="home-section" id="home">
+    <div class="main-text">
+        <h1>
+            NOVEL 
+            <br>
+            <span>store</span>
+        </h1>
+        <p>مرحبًا بك في NOVEL 💻✨
 
-<p>
-<span style="color:black;font-size:24px;">250 ج.م</span>
-<span style="text-decoration:line-through;color:gray;margin-right:10px;">400 ج.م</span>
-</p><h2>لمبة LED بحساس حركة 💡</h2>
+في NOVEL، بنقدم لك مجموعة مميزة من المنتجات العصرية اللي تجمع بين الأناقة والجودة والراحة. هدفنا إنك تلاقي كل اللي يناسب ذوقك بسهولة وتكون دايمًا مميز في اختياراتك.
+إحنا مؤمنين إن ستايلك بيعبر عن شخصيتك، وعشان كده بنختار منتجاتنا بعناية علشان نضمن لك أفضل تجربة ممكنة.
+استمتع بتجربة تسوق سهلة وسريعة، وخلي أناقتك تبدأ من هنا. 🚀</p>
+            
+    </div>
+    
+    <img src="WhatsApp Image 2026-03-05 at 12.52.09 AM.jpeg" alt="" class="kkk">
+    <div class="icons">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-instagram"></i>
+    </div>
 
-<img src="WhatsApp Image 2026-02-27 at 1.05.00 AM copy.jpeg">
-<h2>اشكال جمالية</h2>
+</section>
 
-<br>
-<hr>
+<section class="products">
 
-<img src="WhatsApp Image 2026-02-27 at 1.23.33 AM.jpeg">
-<h2>توفر طاقة</h2>
+ <div class="card-body">
 
-<br>
-<hr>
+    <div class="v">
+        <img src="WhatsApp Image 2026-03-22 at 11.13.54 AM (2).jpeg" class="vv" alt="">
+        <br>
+        <h2 class="p">بافضل جودة ممكنة</h2>
+        <br>
+        <br>
 
-<img src="WhatsApp Image 2026-02-27 at 1.23.34 AM.jpeg" style="border: none; border-radius: 20px;">
-<h2>سهلة التركيب</h2>
+        <img src="WhatsApp Image 2026-03-22 at 11.13.54 AM.jpeg" alt="" class="vv">
+        <br>
+        <h2 class="p">باسهل طريقة ممكنة</h2>
+        <br>
+        <br>
+   
+        <img src="WhatsApp Image 2026-03-22 at 11.13.54 AM (1).jpeg" alt="" class="vv">
+        <br>
+        <h2 class="p"> الدفع مباشر </h2>
+    </div>
 
-<br>
+   
+   </div>
 
-
-<h2>للتواصل عبر واتساب</h2>
-<a href="https://wa.me/201094492277?text=مرحبا%20اريد%20طلب%20لمبة%20LED%20المتحركة%20الرجاء%20التواصل%20معي" target="_blank">
-<button>اطلب الآن</button>
-</a>
-
-<br>
-<br>
-<br>
-
-<input id="name" placeholder="الاسم بالكامل">
-<input id="phone" placeholder="رقم الهاتف">
-<input id="address" placeholder="العنوان بالكامل">
-<br><br>
-<button onclick="saveOrder()">تأكيد الطلب</button>
-
-</div>
-
-<script>
-
-function saveOrder(){
-
-let name=document.getElementById("name").value;
-let phone=document.getElementById("phone").value;
-let address=document.getElementById("address").value;
-
-let orders=JSON.parse(localStorage.getItem("orders"))||[];
-
-orders.push({
-name:name,
-phone:phone,
-address:address
-});
-
-localStorage.setItem("orders",JSON.stringify(orders));
-
-let message=
-"طلب جديد 🔥%0A"+
-"الاسم: "+name+"%0A"+
-"الهاتف: "+phone+"%0A"+
-"العنوان: "+address;
-
-let number="201094492277"; // حط رقمك هنا
-
-window.open("https://wa.me/"+number+"?text="+message);
-
-window.location.href="thanks.html";
-
-}
-
-</script>
-
+</section>
+<script src="script.js"></script>
 </body>
 </html>
-
