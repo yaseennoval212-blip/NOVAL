@@ -1,49 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOVEL</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عرض خاص</title>
 
-    <link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body { direction: rtl; }
+.price-old { text-decoration: line-through; color: gray; }
+.price-new { color: red; font-size: 30px; font-weight: bold; }
+</style>
 </head>
+
 <body>
-    <header class="container">
-    <nav>
-        <div class="logo">
-            <h2>NOVEL<span></span></h2>
-        </div>
 
-        <ul class="links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="thebest.html">the best</a></li>
-        </ul>
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
+<div class="container">
+<a class="navbar-brand fw-bold">NOVEL</a>
 
-   
-        <div class="icons">
-            <i class="fa-solid fa-heart"></i>
-            <i class="fa-solid fa-shopping-cart"></i>
-            <i class="fa-solid fa-user"></i>
-        </div>
-        
-        <i class="fa-solid fa-bars" id="bars"></i>
-    </nav>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">☰</button>
 
-</header>
-
-    <div class="thebest" style="margin-top: 65px;">
-    <h1>the best</h1>
-    <div class="parent">
-         <div class="imag-box">
-           <img src="WhatsApp Image 2026-03-28 at 10.54.52 PM.jpeg" id="image-box" alt="" class="imh">
-         </div>
-          <div class="about-text">
-           <h1>mini progector</h1><br><p>مشروع صغير ومحمول، بيشتغل ببطارية أو مشاهدة الأفلام في أي مكان 😊  USB، بيوفر إضاءة قوية وواضحة، مثالي للعروض التقديمية أو </p>
-          </div>
-    </div>
-    <h2 class="l">1150ج.م</h2>
-    <a class="btn" href="form.html" style="width: 125px;">Shop now</a>
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+<li class="nav-item"><a class="nav-link" href="thebest.html">Best</a></li>
+</ul>
 </div>
+</div>
+</nav>
+
+<div class="container" style="margin-top:100px">
+
+<div class="row align-items-center">
+
+<div class="col-md-6 text-center">
+<img src="WhatsApp Image 2026-03-28 at 10.54.52 PM.jpeg" class="img-fluid rounded">
+</div>
+
+<div class="col-md-6">
+<h2>🔥 Mini Projector</h2>
+
+<div>⭐⭐⭐⭐⭐ (245 تقييم)</div>
+
+<p class="mt-3">
+اعمل سينما في بيتك بسهولة! 🎬  
+جودة عالية + حجم صغير + سهل الحمل
+</p>
+
+<div class="price-old">2000 جنيه</div>
+<div class="price-new">1800 جنيه 🔥</div>
+
+<ul class="mt-3">
+<li>✔️ صورة HD</li>
+<li>✔️ سهل الاستخدام</li>
+<li>✔️ مناسب للموبايل</li>
+</ul>
+
+<a href="form.html" class="btn btn-success w-100 mt-3">اطلب الآن 💰</a>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
